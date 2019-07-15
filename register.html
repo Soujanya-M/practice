@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>>
+    <link rel="stylesheet" href="libs/css1/register.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body ng-app="">
+    
+      <center>
+          <div class="forminput">
+              <form name="frm">
+                    <div class="question">
+                            <label for="name">enter the name:</label>
+                            <input type="name" name="name" id="name" ng-model="name" required>
+                            <span ng-show="frm.name.$error.required">*</span>
+                        </div>
+            
+                <div class="question">
+                    <label for="phnumber">enter the phone number:</label>
+                    <input type="phnumber" name="phnumber" id="phnumber" ng-model="phnumber" required>
+                    <span ng-show="frm.phnumber.$error.required">*</span>
+                </div>
+                
+                <div class="question">
+                        <label for="mail">enter the email:</label>
+                        
+                       
+                        <span style="color:brown;" ng-show="frm.mail,$error.required">*</span>
+                        <input type="mail" name="mail" id="mail" ng-model="mail"  required>
+                        <span ng-show="frm.mail.$error.required">*</span>
+                </div>
+                    
+            
+                    <div class="question">
+                            <label for="pass">enter the password:</label>
+                            <input type="password" name="pass" id="pass" ng-model="pass" ng-minlength="4" ng-maxlength="10" required>
+                            <span ng-show="frm.pass.$error.minlength">too short</span>
+                        </div>
+                        
+                <div class="question">
+                        <label for="cpass">enter the confirm password:</label>
+                        <input type="password" name="cpass" id="cpass" ng-model="cpass" required>
+                        <span ng-show="frm.cpass.$error.required">*</span>
+                        <button onclick="btn">submit</button>
+                    </div>
+                    
+                </div>
+            </form>
+          </div>
+      </center>
+</body>
+</html>
